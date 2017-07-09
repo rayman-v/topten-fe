@@ -1,6 +1,5 @@
 import Vue from 'vue'
 import Router from 'vue-router'
-import Search from '@/views/search'
 import List from '@/views/list'
 
 Vue.use(Router)
@@ -9,10 +8,9 @@ export default new Router({
   routes: [
     {
       path: '/',
-      name: 'search',
-      component: Search
+      redirect: '/list/bdhotnews'
     }, {
-      path: '/list',
+      path: '/list/:keyword',
       name: 'list',
       component: List
     }
